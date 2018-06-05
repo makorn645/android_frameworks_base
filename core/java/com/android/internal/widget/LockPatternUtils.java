@@ -1776,4 +1776,12 @@ public class LockPatternUtils {
         return FRP_CREDENTIAL_ENABLED && context.getResources().getBoolean(
                 com.android.internal.R.bool.config_enableCredentialFactoryResetProtection);
     }
+
+    public boolean shouldPassToSecurityView(int userId) {
+        return getBoolean(Settings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
+    }
+
+    public void setPassToSecurityView(boolean enabled, int userId) {
+        setBoolean(Settings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
+    }
 }

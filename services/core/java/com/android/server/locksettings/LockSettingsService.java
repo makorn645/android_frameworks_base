@@ -99,8 +99,6 @@ import com.android.server.locksettings.SyntheticPasswordManager.AuthenticationRe
 import com.android.server.locksettings.SyntheticPasswordManager.AuthenticationToken;
 import com.android.server.locksettings.LockSettingsStorage.PersistentData;
 
-import lineageos.providers.LineageSettings;
-
 import libcore.util.HexEncoding;
 
 import java.io.ByteArrayOutputStream;
@@ -1983,7 +1981,7 @@ public class LockSettingsService extends ILockSettings.Stub {
             Secure.LOCK_BIOMETRIC_WEAK_FLAGS,
             Secure.LOCK_PATTERN_VISIBLE,
             Secure.LOCK_PATTERN_TACTILE_FEEDBACK_ENABLED,
-            LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW
+            Secure.LOCK_PASS_TO_SECURITY_VIEW
     };
 
     // Reading these settings needs the contacts permission
