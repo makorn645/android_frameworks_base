@@ -8327,8 +8327,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     private void sendLidChangeBroadcast() {
         Log.d(TAG, "Sending cover change broadcast, mLidState=" + mLidState);
-        Intent intent = new Intent(lineageos.content.Intent.ACTION_LID_STATE_CHANGED);
-        intent.putExtra(lineageos.content.Intent.EXTRA_LID_STATE, mLidState);
+        Intent intent = new Intent(android.content.Intent.ACTION_LID_STATE_CHANGED);
+        intent.putExtra(android.content.Intent.EXTRA_LID_STATE, mLidState);
         intent.setFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING);
         mContext.sendBroadcastAsUser(intent, UserHandle.SYSTEM);
     }
